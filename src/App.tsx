@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const Arrow = ({ className = "" }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -737,6 +737,42 @@ function InsightsListPage() {
 }
 
 export default function App() {
+  const [location, setLocation] = useState(() => `${window.location.pathname}${window.location.search}${window.location.hash}`);
+
+  useEffect(() => {
+    const updateLocation = () => setLocation(`${window.location.pathname}${window.location.search}${window.location.hash}`);
+    const handleLinkClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      const target = event.target as Element | null;
+      const link = target?.closest("a");
+      if (!link || link.target || link.hasAttribute("download")) return;
+
+      const url = new URL(link.href, window.location.href);
+      if (url.origin !== window.location.origin || url.protocol !== window.location.protocol) return;
+      if (url.pathname === window.location.pathname && url.search === window.location.search) return;
+
+      event.preventDefault();
+      window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
+      updateLocation();
+    };
+
+    window.addEventListener("popstate", updateLocation);
+    document.addEventListener("click", handleLinkClick);
+    return () => {
+      window.removeEventListener("popstate", updateLocation);
+      document.removeEventListener("click", handleLinkClick);
+    };
+  }, []);
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      const hash = window.location.hash.slice(1);
+      if (hash) document.getElementById(hash)?.scrollIntoView();
+      else window.scrollTo({ top: 0 });
+    });
+  }, [location]);
+
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
   if (path === "/consultancy") return <ConsultancyPage />;
   if (path === "/marketing") return <MarketingPage />;
