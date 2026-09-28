@@ -253,18 +253,18 @@ function HomePage() {
       <section className="insights shell" id="insights">
         <div className="section-heading">
           <div><Kicker>Useful from the first visit</Kicker><h2>Ideas to help you<br /><em>run better today.</em></h2></div>
-          <a className="text-link" href="#insights">View all insights <Arrow /></a>
+          <a className="text-link" href="/insights">View all insights <Arrow /></a>
         </div>
         <div className="insight-grid">
           <article className="insight-featured">
-            <div className="insight-image">
+            <a href="/insights/ten-minute-venue-walk" className="insight-image">
               <img src="https://images.unsplash.com/photo-1780932333368-4995b2e14174?auto=format&fit=crop&w=1100&q=85" alt="Children enjoying a colourful indoor play centre" />
               <span>Guest experience</span>
-            </div>
+            </a>
             <div className="insight-content">
               <small>6 MIN READ</small>
               <h3>The 10-minute venue walk that reveals your biggest guest experience gaps</h3>
-              <a href="#contact" aria-label="Read article"><Arrow /></a>
+              <a href="/insights/ten-minute-venue-walk" aria-label="Read article"><Arrow /></a>
             </div>
           </article>
           <div className="insight-list">
@@ -272,13 +272,13 @@ function HomePage() {
               <span className="insight-tag">PRICING</span>
               <h3>Are your party packages working hard enough?</h3>
               <p>A practical way to check margin, value and choice without racing to discount.</p>
-              <a href="#contact">Read guide <Arrow /></a>
+              <a href="/insights/party-packages-working-hard">Read guide <Arrow /></a>
             </article>
             <article>
               <span className="insight-tag">OPERATIONS</span>
               <h3>Five numbers every soft play owner should know weekly</h3>
               <p>A simple scorecard for making faster, calmer commercial decisions.</p>
-              <a href="#contact">Read guide <Arrow /></a>
+              <a href="/insights/five-numbers-to-know-weekly">Read guide <Arrow /></a>
             </article>
           </div>
         </div>
@@ -560,9 +560,187 @@ function MarketingPage() {
   );
 }
 
+const insights = [
+  {
+    slug: "ten-minute-venue-walk",
+    tag: "Guest experience",
+    readTime: "6 MIN READ",
+    title: "The 10-minute venue walk that reveals your biggest guest experience gaps",
+    summary: "A structured walk of your own site, seen through a guest's eyes, uncovers more than any mystery shopper ever could.",
+    image: "https://images.unsplash.com/photo-1780932333368-4995b2e14174?auto=format&fit=crop&w=1100&q=85",
+    imageAlt: "Children enjoying a colourful indoor play centre",
+    body: [
+      { type: "lead", text: "Most guest experience problems are visible — you just stop seeing them when you work there every day. A deliberate 10-minute walk, done properly, changes that." },
+      { type: "h2", text: "Why a walk works" },
+      { type: "p", text: "You already know your venue. But familiarity is the enemy of observation. When you walk in with fresh eyes — arriving as a guest would, not cutting through the back door — you notice the things that have become invisible: the sign that is peeling, the queue that builds at the counter, the corner where pushchairs block the sightline to the café." },
+      { type: "h2", text: "The six things to clock" },
+      { type: "list", items: ["The first 10 seconds: what does a guest see, hear and smell before they reach the desk?", "The greeting: is it warm, fast and clear on what to do next?", "The table situation: are there visible clean tables? Can you see the play area from them?", "The counter: is the menu readable from the queue? Are the most profitable items prominent?", "The toilets: clean, stocked and signposted? This is a quiet trust signal that parents notice.", "The exit: does it feel like an ending or an invitation to come back?"] },
+      { type: "h2", text: "What to do with what you find" },
+      { type: "p", text: "Write down three things that a new guest would notice that you would rather they did not. Rank them by ease of fix versus impact on the decision to return. Start with the one that is quick and visible. Then build a fortnightly walk into your routine — same route, different eyes each time." },
+      { type: "cta", text: "Want us to walk your site and build the opportunity list with you?" },
+    ],
+  },
+  {
+    slug: "party-packages-working-hard",
+    tag: "Pricing",
+    readTime: "5 MIN READ",
+    title: "Are your party packages working hard enough?",
+    summary: "A practical way to check margin, value and choice without racing to discount.",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1100&q=85",
+    imageAlt: "Birthday party setup at a children's venue",
+    body: [
+      { type: "lead", text: "Party packages are the single highest-margin product most soft play venues sell. They are also the most commonly under-engineered." },
+      { type: "h2", text: "The three-package problem" },
+      { type: "p", text: "Most venues offer three packages labelled something like Bronze, Silver and Gold. The logic is choice. The result is that parents pick the middle one — not because it suits them best, but because the middle always feels safe. If your middle package has the worst margin, you have built a machine for selling your least profitable product." },
+      { type: "h2", text: "Check your own numbers" },
+      { type: "list", items: ["What is the gross margin on each package after food, staff and room cost?", "Which package sells most? Does that match your highest-margin option?", "What does the average party spend beyond the package price?", "How many enquiries convert, and at what package level?"] },
+      { type: "h2", text: "What a good package structure looks like" },
+      { type: "p", text: "Lead with your most popular package as the default, not the entry-level. Make the upgrade feel like value, not upsell — a different room configuration, an extra 30 minutes, a printed name banner. Design it so the incremental cost is low and the perceived difference is high. Then make the top tier genuinely premium, not just expensive." },
+      { type: "h2", text: "The add-on opportunity" },
+      { type: "p", text: "Parties are also your cleanest upsell environment. A parent who has already committed £280 is far more likely to add a party bag upgrade or a balloon arrangement than a walk-in guest is to add a second coffee. Build optional extras that feel like finishing touches, not extras that feel like extras." },
+      { type: "cta", text: "We audit party package architecture as part of every consultancy engagement — get in touch to find out more." },
+    ],
+  },
+  {
+    slug: "five-numbers-to-know-weekly",
+    tag: "Operations",
+    readTime: "4 MIN READ",
+    title: "Five numbers every soft play owner should know weekly",
+    summary: "A simple scorecard for making faster, calmer commercial decisions.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1100&q=85",
+    imageAlt: "A tidy desk with notebook and calculator",
+    body: [
+      { type: "lead", text: "You do not need a finance team to run your venue commercially. You need five numbers, checked weekly, that tell you whether the business is moving in the right direction." },
+      { type: "h2", text: "1. Revenue per admission" },
+      { type: "p", text: "Total revenue divided by total admissions, week by week. This one number captures pricing, secondary spend and mix all at once. If it is moving, something important has changed. If it is flat, your growth has to come from volume." },
+      { type: "h2", text: "2. F&B attach rate" },
+      { type: "p", text: "What fraction of admissions buy anything from the café? Even a rough count — till transactions versus admissions — tells you whether your café is part of the visit or an afterthought." },
+      { type: "h2", text: "3. Party conversion rate" },
+      { type: "p", text: "How many party enquiries became bookings this week? A falling conversion rate usually means the enquiry journey is broken, the packages feel poor value or the follow-up is too slow." },
+      { type: "h2", text: "4. Labour as a percentage of revenue" },
+      { type: "p", text: "Not total wages — labour cost as a percentage of the week's revenue. A wet Tuesday with two sessions running at 20% capacity looks very different to a packed Saturday. This ratio tells you whether your rota is calibrated to actual demand." },
+      { type: "h2", text: "5. Return visit rate" },
+      { type: "p", text: "Of the families who visited in the last 90 days, what percentage have visited more than once? This is your single best proxy for guest satisfaction and the health of your retention. Membership schemes make this easy to track; if you do not have one, a rough email or booking data match will do." },
+      { type: "cta", text: "We build these dashboards as part of every engagement. Book a call to see how yours could look." },
+    ],
+  },
+];
+
+function InsightArticlePage({ slug }: { slug: string }) {
+  const article = insights.find((a) => a.slug === slug);
+  if (!article) return (
+    <main>
+      <PageNav />
+      <section className="page-hero shell" style={{ minHeight: "50vh", display: "flex", alignItems: "center" }}>
+        <div><h1>Article not found</h1><p><a className="text-link" href="/insights">Back to insights <Arrow /></a></p></div>
+      </section>
+      <PageFooter />
+    </main>
+  );
+  return (
+    <main>
+      <PageNav />
+      <section className="article-hero shell">
+        <div className="article-breadcrumb">
+          <a href="/insights">Insights</a><span>/</span><span>{article.tag}</span>
+        </div>
+        <div className="article-header">
+          <span className="insight-tag">{article.tag.toUpperCase()}</span>
+          <h1>{article.title}</h1>
+          <p className="article-lead-text">{article.summary}</p>
+          <small>{article.readTime}</small>
+        </div>
+        <div className="article-image">
+          <img src={article.image} alt={article.imageAlt} />
+        </div>
+      </section>
+      <section className="article-body shell">
+        <div className="article-content">
+          {article.body.map((block, index) => {
+            if (block.type === "lead") return <p key={index} className="article-lead">{block.text}</p>;
+            if (block.type === "h2") return <h2 key={index}>{block.text}</h2>;
+            if (block.type === "p") return <p key={index}>{block.text}</p>;
+            if (block.type === "list") return <ul key={index}>{(block.items ?? []).map((item, i) => <li key={i}><Check /><span>{item}</span></li>)}</ul>;
+            if (block.type === "cta") return (
+              <div key={index} className="article-cta-block">
+                <p>{block.text}</p>
+                <ButtonLink href="mailto:shayaan@ascendplay.co.uk" variant="primary">Book a growth call</ButtonLink>
+              </div>
+            );
+            return null;
+          })}
+        </div>
+        <aside className="article-sidebar">
+          <div className="sidebar-card">
+            <Kicker>More insights</Kicker>
+            {insights.filter((a) => a.slug !== slug).map((a) => (
+              <a key={a.slug} href={`/insights/${a.slug}`} className="sidebar-insight">
+                <span className="insight-tag">{a.tag.toUpperCase()}</span>
+                <strong>{a.title}</strong>
+                <small>{a.readTime}</small>
+              </a>
+            ))}
+          </div>
+          <div className="sidebar-card sidebar-cta-card">
+            <Spark />
+            <strong>Ready to go further?</strong>
+            <p>Book a free 30-minute growth call and we will find two or three costed opportunities in your business.</p>
+            <ButtonLink href="mailto:shayaan@ascendplay.co.uk" variant="primary">Book your call</ButtonLink>
+          </div>
+        </aside>
+      </section>
+      <PageFooter />
+    </main>
+  );
+}
+
+function InsightsListPage() {
+  return (
+    <main>
+      <PageNav />
+      <section className="page-hero shell">
+        <div>
+          <Kicker>Useful from the first visit</Kicker>
+          <h1>Ideas to help you<br /><em>run better today.</em></h1>
+          <p className="hero-lede">Practical thinking on guest experience, operations, pricing and marketing — written for independent soft play owners.</p>
+        </div>
+      </section>
+      <section className="insights-list shell">
+        <div className="insight-grid">
+          <article className="insight-featured">
+            <a href={`/insights/${insights[0].slug}`} className="insight-image">
+              <img src={insights[0].image} alt={insights[0].imageAlt} />
+              <span>{insights[0].tag}</span>
+            </a>
+            <div className="insight-content">
+              <small>{insights[0].readTime}</small>
+              <h3>{insights[0].title}</h3>
+              <a href={`/insights/${insights[0].slug}`} className="text-link">Read article <Arrow /></a>
+            </div>
+          </article>
+          <div className="insight-list">
+            {insights.slice(1).map((article) => (
+              <article key={article.slug}>
+                <span className="insight-tag">{article.tag.toUpperCase()}</span>
+                <h3>{article.title}</h3>
+                <p>{article.summary}</p>
+                <a href={`/insights/${article.slug}`} className="text-link-sm">Read guide <Arrow /></a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <PageContact title="Questions? Let's talk about your venue." />
+      <PageFooter />
+    </main>
+  );
+}
+
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
   if (path === "/consultancy") return <ConsultancyPage />;
   if (path === "/marketing") return <MarketingPage />;
+  if (path === "/insights") return <InsightsListPage />;
+  if (path.startsWith("/insights/")) return <InsightArticlePage slug={path.replace("/insights/", "")} />;
   return <HomePage />;
 }
