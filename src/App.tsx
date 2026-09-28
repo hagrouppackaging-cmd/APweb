@@ -299,7 +299,7 @@ function HomePage() {
         <div className="footer-main">
           <div><Logo /><p>Helping UK soft play businesses<br />grow stronger, smarter and happier.</p></div>
           <div><strong>Explore</strong><a href="/consultancy">Consultancy</a><a href="/marketing">Marketing</a><a href="#insights">Insights</a></div>
-          <div><strong>Connect</strong><a href="mailto:shayaan@ascendplay.co.uk">shayaan@ascendplay.co.uk</a><a href="#contact">LinkedIn</a><a href="#contact">Instagram</a></div>
+          <div><strong>Connect</strong><a href="mailto:shayaan@ascendplay.co.uk">shayaan@ascendplay.co.uk</a><a href="mailto:shayaan@ascendplay.co.uk?subject=Ascend Play enquiry">Start a conversation</a></div>
           <div className="footer-news"><strong>Useful ideas, once a month.</strong><p>Practical advice for ambitious venue owners.</p><a href="mailto:shayaan@ascendplay.co.uk?subject=Join the newsletter">Join the newsletter <Arrow /></a></div>
         </div>
         <div className="footer-bottom"><span>© 2026 Ascend Play Ltd.</span><span>Privacy &nbsp; Terms</span><span>Made with purpose in the UK</span></div>
@@ -313,7 +313,7 @@ const PageFooter = () => (
     <div className="footer-main">
       <div><Logo /><p>Helping UK soft play businesses<br />grow stronger, smarter and happier.</p></div>
       <div><strong>Explore</strong><a href="/consultancy">Consultancy</a><a href="/marketing">Marketing</a><a href="/#insights">Insights</a></div>
-      <div><strong>Connect</strong><a href="mailto:shayaan@ascendplay.co.uk">shayaan@ascendplay.co.uk</a><a href="#contact">LinkedIn</a><a href="#contact">Instagram</a></div>
+      <div><strong>Connect</strong><a href="mailto:shayaan@ascendplay.co.uk">shayaan@ascendplay.co.uk</a><a href="mailto:shayaan@ascendplay.co.uk?subject=Ascend Play enquiry">Start a conversation</a></div>
       <div className="footer-news"><strong>Useful ideas, once a month.</strong><p>Practical advice for ambitious venue owners.</p><a href="mailto:shayaan@ascendplay.co.uk?subject=Join the newsletter">Join the newsletter <Arrow /></a></div>
     </div>
     <div className="footer-bottom"><span>© 2026 Ascend Play Ltd.</span><span>Privacy &nbsp; Terms</span><span>Made with purpose in the UK</span></div>
