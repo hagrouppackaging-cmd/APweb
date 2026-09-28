@@ -36,7 +36,7 @@ const PageNav = ({ active }: { active?: "consultancy" | "marketing" }) => {
         <a href="/#calculator">Growth calculator</a>
         <a href="/#insights">Insights</a>
       </div>
-      <a className="nav-cta" href="#contact">Book a growth call <Arrow /></a>
+      <a className="nav-cta" href="mailto:shayaan@ascendplay.co.uk">Book a growth call <Arrow /></a>
       <button className="menu-button" aria-label="Toggle menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
         <span /><span />
       </button>
@@ -88,7 +88,7 @@ function HomePage() {
           <a href="#approach" onClick={() => setMenuOpen(false)}>Our approach</a>
           <a href="#insights" onClick={() => setMenuOpen(false)}>Insights</a>
         </div>
-        <a className="nav-cta" href="#contact">Book a growth call <Arrow /></a>
+        <a className="nav-cta" href="mailto:shayaan@ascendplay.co.uk">Book a growth call <Arrow /></a>
         <button className="menu-button" aria-label="Toggle menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span /><span />
         </button>
@@ -290,7 +290,7 @@ function HomePage() {
           <Kicker light>A better business starts with a conversation</Kicker>
           <h2>Ready to see how far<br />your venue could go?</h2>
           <p>Book a free, no-pressure 30-minute growth call. We will talk through where you are, what is getting in the way and where the clearest opportunity might be.</p>
-          <ButtonLink href="mailto:hello@ascendplay.co.uk" variant="light">Book your free growth call</ButtonLink>
+          <ButtonLink href="mailto:shayaan@ascendplay.co.uk" variant="light">Book your free growth call</ButtonLink>
           <small>No hard sell. Just a useful conversation.</small>
         </div>
       </section>
@@ -298,11 +298,11 @@ function HomePage() {
       <footer className="footer shell">
         <div className="footer-main">
           <div><Logo /><p>Helping UK soft play businesses<br />grow stronger, smarter and happier.</p></div>
-          <div><strong>Explore</strong><a href="#services">Consultancy</a><a href="#services">Marketing</a><a href="#insights">Insights</a></div>
-          <div><strong>Connect</strong><a href="mailto:hello@ascendplay.co.uk">hello@ascendplay.co.uk</a><a href="#contact">LinkedIn</a><a href="#contact">Instagram</a></div>
-          <div className="footer-news"><strong>Useful ideas, once a month.</strong><p>Practical advice for ambitious venue owners.</p><a href="mailto:hello@ascendplay.co.uk?subject=Join the newsletter">Join the newsletter <Arrow /></a></div>
+          <div><strong>Explore</strong><a href="/consultancy">Consultancy</a><a href="/marketing">Marketing</a><a href="#insights">Insights</a></div>
+          <div><strong>Connect</strong><a href="mailto:shayaan@ascendplay.co.uk">shayaan@ascendplay.co.uk</a><a href="#contact">LinkedIn</a><a href="#contact">Instagram</a></div>
+          <div className="footer-news"><strong>Useful ideas, once a month.</strong><p>Practical advice for ambitious venue owners.</p><a href="mailto:shayaan@ascendplay.co.uk?subject=Join the newsletter">Join the newsletter <Arrow /></a></div>
         </div>
-        <div className="footer-bottom"><span>© 2025 Ascend Play Ltd.</span><span>Privacy &nbsp; Terms</span><span>Made with purpose in the UK</span></div>
+        <div className="footer-bottom"><span>© 2026 Ascend Play Ltd.</span><span>Privacy &nbsp; Terms</span><span>Made with purpose in the UK</span></div>
       </footer>
     </main>
   );
@@ -423,21 +423,29 @@ function ConsultancyPage() {
         <div className="shell">
           <Kicker light>Foundations first. Measurement second. Marketing last.</Kicker>
           <div className="method-grid">
-            <article><span>DAYS 0–30</span><h3>Diagnostic</h3><p>P&L, item-level EPOS, bookings, rota, cost of goods and half a day on site. You get six answers and a ranked, valued opportunity list.</p></article>
-            <article><span>DAYS 31–90</span><h3>Build</h3><p>Service standards, margin and pricing architecture, party structure, then retention mechanics — sequenced so your team can absorb it.</p></article>
-            <article><span>MONTH 4 →</span><h3>Operate & compound</h3><p>Monthly review against baseline, one lever tested in depth, quarterly reforecast and improvements that survive August and February.</p></article>
+            <article>
+              <h3>Diagnostic</h3>
+              <p>P&L, item-level EPOS, bookings, rota, cost of goods and half a day on site. You get six answers and a ranked, valued opportunity list.</p>
+            </article>
+            <article>
+              <h3>Build</h3>
+              <p>Service standards, margin and pricing architecture, party structure, then retention mechanics — sequenced so your team can absorb it.</p>
+            </article>
+            <article>
+              <h3>Operate &amp; compound</h3>
+              <p>Monthly review against baseline, one lever tested in depth, quarterly reforecast and improvements that survive August and February.</p>
+            </article>
           </div>
         </div>
       </section>
 
       <section className="packages shell">
         <div className="section-heading"><div><Kicker>Ways to work together</Kicker><h2>Matched to how deep<br /><em>you want us in.</em></h2></div><p>Rolling monthly. Thirty days’ notice. No tie-in. Everything we build is documented and handed to your team.</p></div>
-        <div className="package-grid">
-          <article><span>FOUNDATIONS</span><h3>£1,000<small>/ month</small></h3><p>For single-site owners who want commercial discipline installed and run properly.</p><ul><li><Check />Full commercial diagnostic</li><li><Check />KPI dashboard</li><li><Check />One lever worked monthly</li><li><Check />Written action review</li></ul><ButtonLink href="#contact" variant="secondary">Discuss Foundations</ButtonLink></article>
-          <article className="package-featured"><span>GROWTH ADVISORY · MOST CHOSEN</span><h3>£1,500<small>/ month</small></h3><p>For operators actively pushing growth who want a partner, not a report.</p><ul><li><Check />Everything in Foundations</li><li><Check />Monthly strategy session</li><li><Check />Pricing, menu & party architecture</li><li><Check />Retention planning, ROI-tracked</li></ul><ButtonLink href="#contact" variant="light">Discuss Growth</ButtonLink></article>
-          <article><span>FRACTIONAL COO</span><h3>£3,000<small>/ month</small></h3><p>Senior operational ownership for multi-site or expanding operators.</p><ul><li><Check />Everything in Growth</li><li><Check />Weekly direct involvement</li><li><Check />On-floor team coaching</li><li><Check />Finance-readiness</li></ul><ButtonLink href="#contact" variant="secondary">Discuss COO support</ButtonLink></article>
+        <div className="package-grid package-grid-two">
+          <article className="package-featured"><span>GROWTH ADVISORY · MOST CHOSEN</span><h3>£1,500<small>/ month</small></h3><p>For operators actively pushing growth who want a partner, not a report.</p><ul><li><Check />Full commercial diagnostic</li><li><Check />KPI dashboard & monthly strategy session</li><li><Check />Pricing, menu &amp; party architecture</li><li><Check />Retention planning, ROI-tracked</li></ul><ButtonLink href="mailto:shayaan@ascendplay.co.uk" variant="light">Discuss Growth Advisory</ButtonLink></article>
+          <article><span>FRACTIONAL COO</span><h3>£3,000<small>/ month</small></h3><p>Senior operational ownership for multi-site or expanding operators.</p><ul><li><Check />Everything in Growth Advisory</li><li><Check />Weekly direct involvement</li><li><Check />On-floor team coaching</li><li><Check />Finance-readiness</li></ul><ButtonLink href="mailto:shayaan@ascendplay.co.uk" variant="secondary">Discuss COO support</ButtonLink></article>
         </div>
-        <p className="package-note">All prices exclude VAT. Consultancy clients receive 25% off marketing packages.</p>
+        <p className="package-note">All prices exclude VAT. Consultancy clients receive 25% off the marketing package.</p>
       </section>
       <PageContact title="Let’s find the money already in your building." />
       <PageFooter />
@@ -539,13 +547,12 @@ function MarketingPage() {
       </section>
 
       <section className="packages shell">
-        <div className="section-heading"><div><Kicker>Simple, accountable packages</Kicker><h2>Pay for a rhythm.<br /><em>Measure the return.</em></h2></div><p>Ad spend is paid directly to the platform with no markup. You see exactly what was spent and what it returned.</p></div>
-        <div className="marketing-packages">
-          <article><span>MARKETING ESSENTIALS</span><h3>£600<small>/ month</small></h3><p>For venues that need consistency and rhythm.</p><ul><li><Check />Local search & Google profile</li><li><Check />Review engine</li><li><Check />Social calendar</li><li><Check />Seasonal offers</li></ul><ButtonLink href="#contact" variant="secondary">Choose Essentials</ButtonLink></article>
-          <article className="package-featured"><span>MARKETING GROWTH</span><h3>£1,200<small>/ month</small></h3><p>For venues ready to acquire and retain with intent.</p><ul><li><Check />Everything in Essentials</li><li><Check />Paid social to cost-per-booking</li><li><Check />Party enquiry funnel</li><li><Check />Retention flows & landing pages</li></ul><ButtonLink href="#contact" variant="light">Choose Growth</ButtonLink></article>
+        <div className="section-heading"><div><Kicker>Simple, accountable package</Kicker><h2>Everything you need.<br /><em>One clear price.</em></h2></div><p>Ad spend is paid directly to the platform with no markup. You see exactly what was spent and what it returned.</p></div>
+        <div className="marketing-packages marketing-single">
+          <article className="package-featured marketing-all-in-one"><span>MARKETING ALL-IN-ONE</span><h3>£1,200<small>/ month</small></h3><p>The complete demand system for ambitious venue owners — from discovery to retention, all joined up.</p><ul><li><Check />Local search &amp; Google Business Profile</li><li><Check />Review engine &amp; social calendar</li><li><Check />Paid social to cost-per-booking</li><li><Check />Party enquiry funnel</li><li><Check />Retention flows &amp; landing pages</li><li><Check />Monthly reporting dashboard</li></ul><ButtonLink href="mailto:shayaan@ascendplay.co.uk" variant="light">Get started</ButtonLink></article>
           <div className="report-card"><span>WHAT WE REPORT</span>{["Cost per booking", "Return on ad spend", "Enquiry → booking", "Target-session fill", "Review velocity"].map((item, index) => <p key={item}><strong>{item}</strong><b>{["£", "×", "%", "pts", "trend"][index]}</b></p>)}</div>
         </div>
-        <p className="package-note">Prices exclude VAT. Consultancy clients receive 25% off either package.</p>
+        <p className="package-note">Prices exclude VAT. Consultancy clients receive 25% off this package.</p>
       </section>
       <PageContact title="Let’s make your quiet hours work harder." />
       <PageFooter />
