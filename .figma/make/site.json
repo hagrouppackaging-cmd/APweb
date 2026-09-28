@@ -1,0 +1,10 @@
+{
+  "description": "Designed for UK soft play owners, this modern website offers engaging consultancy and marketing services with interactive features and valuable insights.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
